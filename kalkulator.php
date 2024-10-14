@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloribus beatae dolorum soluta natus cumque ab saepe, nobis ut error, officia provident aliquid deleniti optio, laborum blanditiis amet commodi ipsum.</p>
     <?php
     echo "hello";
     ?>
