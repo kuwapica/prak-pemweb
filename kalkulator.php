@@ -9,10 +9,10 @@
     <h1>Aplikasi Kalkulator Sederhana</h1>
     <form name="kalkulator" action="" method="POST">
         <label for="input1">Input 1 : </label>
-        <input type="text" id="input1" name="input1" value="<?php echo isset($_POST['input1']) ? htmlspecialchars($_POST['input1']) : ''; ?>" ><br><br>
+        <input type="text" id="input1" name="input1" value="<?php echo isset($_POST['input1']) ? ($_POST['input1']) : ''; ?>" ><br><br>
 
         <label for="input2">Input 2 : </label>
-        <input type="text" id="input2" name="input2" value="<?php echo isset($_POST['input2']) ? htmlspecialchars($_POST['input2']) : ''; ?>" ><br><br>
+        <input type="text" id="input2" name="input2" value="<?php echo isset($_POST['input2']) ? ($_POST['input2']) : ''; ?>" ><br><br>
 
             <button type="submit" name="operator" value="+">+</button>
             <button type="submit" name="operator" value="-">-</button>
