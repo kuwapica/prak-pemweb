@@ -26,10 +26,10 @@
         }
         ?>" ><br><br>
 
-            <button type="submit" name="operator" value="+">+</button>
-            <button type="submit" name="operator" value="-">-</button>
-            <button type="submit" name="operator" value="*">*</button>
-            <button type="submit" name="operator" value="/">/</button><br><br>
+            <button type="submit" name="operator" value="tambah">+</button>
+            <button type="submit" name="operator" value="kurang">-</button>
+            <button type="submit" name="operator" value="kali">*</button>
+            <button type="submit" name="operator" value="bagi">/</button><br><br>
 
         <label>Hasil: </label>
         <span>
@@ -41,13 +41,13 @@
                     $operator = $_POST['operator'];
             
                     if (is_numeric($input1) && is_numeric($input2)) {
-                        if ($operator == '+') {
+                        if ($operator == 'tambah') {
                             $hasil = $input1 + $input2;
-                        } else if ($operator == '-') {
+                        } else if ($operator == 'kurang') {
                             $hasil = $input1 - $input2;
-                        } else if ($operator == '*') {
+                        } else if ($operator == 'kali') {
                             $hasil = $input1 * $input2;
-                        } else if ($operator == '/') {
+                        } else if ($operator == 'bagi') {
                             if ($input2 == 0) {
                                 echo "Tidak bisa dibagi dengan nol";
                             } else {
