@@ -23,7 +23,7 @@
                 </td>
             </tr>
             <tr></tr>
-                <td>Komentar &nbsp;</td>
+                <td>Komentar</td>
                 <td>:</td>
                 <td>
                     <textarea type="text" id="komentar" name="komentar" rows="10" cols="45"></textarea>
@@ -37,13 +37,12 @@
         </table>
     </form>
     <script>
-        function cek() {
             var fieldnama = document.getElementById("nama");
             var fieldemail = document.getElementById("email");
             var fieldkomentar = document.getElementById("komentar");
 
         function cekNama() {
-            let regex = new RegExp("^[A-Z a-z]+$");
+            let regex = new RegExp("^[A-Z a-z]+$"); /*^ = negasi, */
             if (!regex.test(fieldnama.value) && fieldnama.value != "") {
                 alert("Nama tidak boleh memiliki angka atau simbol!");
                 fieldnama.value = fieldnama.value.replace(/[^A-Z a-z]/g, '');
@@ -57,7 +56,6 @@
             alert("Submit form sukses");
             return true;
         }
-    }
     </script>
 </body>
 </html>
