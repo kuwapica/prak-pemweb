@@ -38,22 +38,26 @@
     </form>
     <script>
         function cek() {
-            const nama = document.getElementById("nama");
-            const email = document.getElementById("email");
-            const komentar = document.getElementById("komentar")
-            if (nama.value == "" || email.value == "" || komentar.value == "") {
-                alert("Semua field harus diisi!");
-                nama.focus();
-                email.focus();
-                komentar.focus();
+            var fieldnama = document.getElementById("nama");
+            var fieldemail = document.getElementById("email");
+            var fieldkomentar = document.getElementById("komentar");
+
+        function cekNama() {
+            let regex = new RegExp("^[A-Z a-z]+$");
+            if (!regex.test(fieldnama.value) && fieldnama.value != "") {
+                alert("Nama tidak boleh memiliki angka atau simbol!");
+                fieldnama.value = fieldnama.value.replace(/[^A-Z a-z]/g, '');
+            }
+        }
+        function cek() {
+            if (fieldnama.value == "" && fieldemail.value == "" && fieldkomentar.value == "") {
+                alert("Mohon isi semua input field!");
                 return false;
             }
-            alert("Pengisian form sukses");
+            alert("Submit form sukses");
             return true;
         }
-        function cekNama() {
-            const regex = new RegExp("^") /*^ = negasi + = salah satu atau bnyk boleh, $ = utk mrngakhiri pola*/
-        }
+    }
     </script>
 </body>
 </html>
