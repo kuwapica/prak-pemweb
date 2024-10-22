@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+    <style>
+        * {
+            box-sizing: border-box; /*untuk meratakan, box menyesuaikan sama yang ditempati, stay disitu*/
+        }
+
+        .box {
+            margin: 2px, auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box-header {
+            width: 700px;
+            height:80px;
+            border: 4px solid black;
+            padding: 20px;
+            margin: 2px;
+        }
+
+        .box-center {
+            width: 700px;
+            height: 450px;
+            border: 2px solid black;
+            padding: 22px;
+            margin: 2px;
+        }
+
+        .box-footer {
+            width: 700px;
+            height: 30px;
+            border: 6px solid black;
+            padding: 18px;
+            margin: 2px;
+        }
+
+        .box-header:hover {
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-header"></div>
+        <div class="box-center"></div>
+        <div class="box-footer"></div>
+    </div>
+</body>
+</html>

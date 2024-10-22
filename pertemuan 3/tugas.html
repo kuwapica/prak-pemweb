@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pertemuan 3</title>
+    <style>
+        body {background: #f0d5f4;}
+        h2 {
+            font-family: Inter;
+            background-color: #A084CA;
+            text-align: center;
+        }
+
+        table {
+            background: #BFACE0;
+            margin: 0 auto;
+            padding: 5px;
+            width: 68%;
+            border-width: 0px;
+            font-family: inter;
+            border: solid black;
+            border-style: dotted;
+        }
+
+        .kolom1 {
+            font-weight: bold;
+            width: 15%;
+        }
+
+        .kolom2 {width: 2%;}
+
+        .kolom3 {
+            width: 83%;
+        }
+
+        #txtNama, #txtKota {width: 168px;}
+
+        #txtTgl, #txtBulan {width: 54px;}
+
+        #txtTahun {width: 87px;}
+
+        #txtAlamat {
+            width: 346px;
+            height: 42px;
+        }
+
+        #btnKirim, #btnCancel {
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 500;
+            outline: none;
+        }
+
+        #btnKirim:hover, #btnCancel:hover{
+            background-color: #7a5cad;
+            text-decoration: underline;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Free Registration</h2>
+    <form action="proses.php" method="post" name="form">
+    <table>
+        <tr>
+            <td class="kolom1">Nama</td>
+            <td class="kolom2">:</td>
+            <td class="kolom3"><input name="txtNama" id="txtNama"></td>
+        </tr>
+        <tr>
+            <td class="kolom1">Tgl Lahir</td>
+            <td>:</td>
+            <td class="kolom3">
+                <input name="txtTgl" type="text" id="txtTgl" maxlength="2">
+                /
+                <input name="txtBulan" type="text" id="txtBulan" maxlength="2">
+                /
+                <input name="txtTahun" type="text" id="txtTahun" maxlength="4">
+            </td>
+        </tr>
+        <tr>
+            <td class="kolom1">Alamat</td>
+            <td>&nbsp;</td>
+            <td><textarea name="txtAlamat" id="txtAlamat"></textarea></td>
+        </tr>
+        <tr>
+            <td class="kolom1">Kota</td>
+            <td>:</td>
+            <td><input name="txtKota" type="text" id="txtKota"></td>
+        </tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+            <input name="btnKirim" type="submit" id="btnKirim" value="Kirim">
+            <input name="btnCancel" type="reset" id="btnCancel" value="Cancel">
+        </td>
+    </table>
+</form>
+</body>
+</html>

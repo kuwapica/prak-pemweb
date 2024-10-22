@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tugas 2 </title>
+</head>
+<body>
+    <h1>Form dengan Variasi Text Input</h1>
+    <p>
+        <form name="form" method="post" action="">
+            <label for="input1">Input dengan value tetap, dapat diklik tapi tidak dapat diubah:</label><br>
+            <input type="text" name="input1" id="input1" value="Test" readonly><br>
+            Input dengan maksimal 5 karakter:<br>
+            <input type="text" name="input2" id="input2" maxlength="5"><br>
+            Input yang tidak dapat diklik dan diubah:<br>
+            <input type="text" name="input3" id="input3" disabled><br>
+            Input yang harus diisi:<br>
+            <input type="text" name="input4" type="input4" required><br>
+            Input NIM:<br>
+            <input type="text" name="input5" id="input5" maxlength="9" pattern="[A-Z][0-9][A-Z]{6}+" required>
+            <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+        <a href="halaman1.html">Tautan ke Halaman Utama</a>
+    </p>
+</html>

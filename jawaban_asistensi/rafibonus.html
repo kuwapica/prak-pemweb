@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Poin</title>
+</head>
+
+<body>
+    <h2>Kalkulator Poin</h2>
+    <form id="pointForm">
+        Masukkan bilangan: <input type="number" id="inputNumber" required>
+        <input type="submit" value="Jumlahkan">
+    </form>
+    <p id="result">Total Poin: 0</p>
+
+    <script>
+        let numbers = [];
+
+        document.getElementById('pointForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const input = document.getElementById('inputNumber');
+            const number = parseInt(input.value);
+
+            if (!isNaN(number)) {
+                numbers.push(number);
+                calculatePoints();
+                input.value = '';
+            }
+        });
+
+        function calculatePoints() {
+            let totalPoints = 0;
+
+            for (let num of numbers) {
+                if (num === 4) {
+                    totalPoints += 4;
+                } else if (num % 2 === 0 || num === 0) {
+                    totalPoints += 2;
+                } else {
+                    totalPoints += 1;
+                }
+            }
+
+            document.getElementById('result').textContent = `Total Poin: ${totalPoints}`;
+        }
+    </script>
+</body>
+
+</html>

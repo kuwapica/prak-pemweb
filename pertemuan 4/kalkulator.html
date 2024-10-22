@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h1>Aplikasi Kalkulator Sederhana</h1>
+    <p>Input 1 : <input type="text" name="input1" id="input1"></p>
+    <p>Input 2 : <input type="text" name="input2" id="input2"> </p>
+    <p>
+        <input type="button" value="+" onclick="tambah()">
+        <input type="button" value="-" onclick="kurang()">
+        <input type="button" value="*" onclick="kali()">
+        <input type="button" value="/" onclick="bagi()">
+    </p> 
+    <p>Hasil: </p>
+    <p id="hasil"></p>
+
+    <script>
+        function tambah() {       
+            var input1 = parseFloat(document.getElementById('input1').value);
+            var input2 = parseFloat(document.getElementById('input2').value);              
+            document.getElementById('hasil').textContent = input1 + input2;
+        }
+
+        function kurang() {
+            var input1 = parseFloat(document.getElementById('input1').value);
+            var input2 = parseFloat(document.getElementById('input2').value);
+            document.getElementById('hasil').textContent = input1 - input2;
+        }
+
+        function kali() {
+            var input1 = parseFloat(document.getElementById('input1').value);
+            var input2 = parseFloat(document.getElementById('input2').value);
+            document.getElementById('hasil').textContent = input1 * input2;
+        }
+
+        function bagi() {
+            var input1 = parseFloat(document.getElementById('input1').value);
+            var input2 = parseFloat(document.getElementById('input2').value);
+            document.getElementById('hasil').textContent = input1 / input2;
+        }
+    </script>
+</body>
+</html>

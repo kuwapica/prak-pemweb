@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Konversi Nilai</title>
+</head>
+<body>
+    <h1>Aplikasi Konversi Nilai</h1>
+    <form method="post" name="form1">
+        Nilai : <input type="text" id="nilai_input" name="nilai_input" size="5">
+        <input type="button" id="konversi" name="konversi" value="Konversi" onclick="cekNilai()">
+        <p>Hasil Konversi : </p>
+        <p id="hasilkonversi"></p>
+    </form>
+    
+    <script>
+        function cekNilai() {
+            var nilai = parseFloat(document.getElementById('nilai_input').value);
+            let hasil = ''; /*biar isinya string*/
+            if (nilai <= 100 && nilai >=81) {
+                hasil = 'A';
+            } else 
+            if (nilai <= 80 && nilai >= 61) {
+                hasil = 'B';
+            } else
+            if (nilai <= 60 && nilai >= 41) {
+                hasil = 'C';
+            } else
+            if (nilai <=40 && nilai >=21) {
+                hasil = 'D';
+            } else 
+            if (nilai <=20 && nilai >=0) {
+                hasil = 'E';
+            }
+            document.getElementById('hasilkonversi').textContent = hasil;
+        }
+    </script>
+</body>
+</html>
